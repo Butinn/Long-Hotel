@@ -1,8 +1,8 @@
-package org.example.controller;
+package com.example.LongHotel.controller;
 
-import org.example.DTO.LoginDTO;
-import org.example.entity.UserEntity;
-import org.example.service.UserService;
+import com.example.LongHotel.DTO.LoginDTO;
+import com.example.LongHotel.entity.UserEntity;
+import com.example.LongHotel.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

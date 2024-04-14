@@ -1,8 +1,6 @@
-package org.example.service;
+package com.example.LongHotel.service;
 
-import org.example.DTO.LoginDTO;
-import org.example.entity.RoomEntity;
-import org.example.entity.UserEntity;
+import com.example.LongHotel.entity.RoomEntity;
 
 import java.util.List;
 

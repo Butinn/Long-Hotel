@@ -1,16 +1,11 @@
-package org.example.service.Impl;
+package com.example.LongHotel.service.Impl;
 
-import org.example.DTO.LoginDTO;
-import org.example.entity.RoomEntity;
-import org.example.entity.UserEntity;
-import org.example.repository.RoomRepository;
-import org.example.repository.UserRepository;
-import org.example.service.RoomService;
-import org.example.service.UserService;
+import com.example.LongHotel.entity.RoomEntity;
+import com.example.LongHotel.repository.RoomRepository;
+import com.example.LongHotel.service.RoomService;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.List;
-import java.util.Optional;
 
 public class RoomServiceImpl implements RoomService {
     @Autowired

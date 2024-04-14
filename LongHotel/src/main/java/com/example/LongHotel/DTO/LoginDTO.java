@@ -1,4 +1,4 @@
-package org.example.DTO;
+package com.example.LongHotel.DTO;
 
 import lombok.Data;
 

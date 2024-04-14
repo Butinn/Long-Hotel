@@ -1,9 +1,9 @@
-package org.example.service.Impl;
+package com.example.LongHotel.service.Impl;
 
-import org.example.DTO.LoginDTO;
-import org.example.entity.UserEntity;
-import org.example.repository.UserRepository;
-import org.example.service.UserService;
+import com.example.LongHotel.DTO.LoginDTO;
+import com.example.LongHotel.entity.UserEntity;
+import com.example.LongHotel.repository.UserRepository;
+import com.example.LongHotel.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.List;

@@ -1,7 +1,7 @@
-package org.example.service;
+package com.example.LongHotel.service;
 
-import org.example.DTO.LoginDTO;
-import org.example.entity.UserEntity;
+import com.example.LongHotel.DTO.LoginDTO;
+import com.example.LongHotel.entity.UserEntity;
 
 import java.util.List;
 
@@ -10,7 +10,7 @@ public interface UserService {
 
     List<UserEntity> getUser(String name);
 
-    void insertUser(UserEntity userEntity) ;
+    void insertUser(UserEntity userEntity);
 
     void deleteUser(Integer userId);
 
