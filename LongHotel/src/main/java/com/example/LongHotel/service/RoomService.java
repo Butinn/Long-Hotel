@@ -1,9 +1,11 @@
 package com.example.LongHotel.service;
 
 import com.example.LongHotel.entity.RoomEntity;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Service
 public interface RoomService {
     List<RoomEntity> getAllRoom();
 

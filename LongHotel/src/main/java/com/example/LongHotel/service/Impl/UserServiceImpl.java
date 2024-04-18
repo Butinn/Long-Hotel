@@ -5,10 +5,12 @@ import com.example.LongHotel.entity.UserEntity;
 import com.example.LongHotel.repository.UserRepository;
 import com.example.LongHotel.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
 
+@Service
 public class UserServiceImpl implements UserService {
     @Autowired
     private UserRepository userRepository;
@@ -52,6 +54,12 @@ public class UserServiceImpl implements UserService {
             if (userEntity.getPassword() != null) {
                 user.setPassword(userEntity.getPassword());
             }
+            if (userEntity.getFullname() != null) {
+                user.setFullname(userEntity.getFullname());
+            }
+            if (userEntity.getDateOfBirth() != null) {
+                user.setDateOfBirth(userEntity.getDateOfBirth());
+            }
             if (userEntity.getType() != null) {
                 user.setType(userEntity.getType());
             }
@@ -61,6 +69,7 @@ public class UserServiceImpl implements UserService {
             if (userEntity.getPhoneNumber() != null) {
                 user.setPhoneNumber(userEntity.getPhoneNumber());
             }
+
             userRepository.save(user);
         }
     }

@@ -11,16 +11,19 @@ import java.util.List;
 @RestController
 @RequestMapping("/api/room")
 public class RoomController {
-    @Autowired
-    private RoomService roomService;
+    private final RoomService roomService;
+
+    public RoomController(RoomService roomService) {
+        this.roomService = roomService;
+    }
 
     @GetMapping("/get-all-room")
     public List<RoomEntity> getAllRoom() {
         return roomService.getAllRoom();
     }
 
-    @GetMapping("/get-room/{room-number}")
-    public List<RoomEntity> getRoom(@PathVariable String name) {
+    @GetMapping("/get-room/{roomNumber}")
+    public List<RoomEntity> getRoom(@PathVariable String roomNumber) {
         return null;
     }
 
@@ -31,7 +34,7 @@ public class RoomController {
         return roomEntity;
     }
 
-    @DeleteMapping("/delete/{room-number}")
+    @DeleteMapping("/delete/{roomId}")
     public void deleteRoom(@PathVariable Integer roomId) {
         roomService.deleteRoom(roomId);
     }

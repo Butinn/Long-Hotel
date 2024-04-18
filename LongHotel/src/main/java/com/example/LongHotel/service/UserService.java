@@ -2,9 +2,11 @@ package com.example.LongHotel.service;
 
 import com.example.LongHotel.DTO.LoginDTO;
 import com.example.LongHotel.entity.UserEntity;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Service
 public interface UserService {
     List<UserEntity> getAllUser();
 
