@@ -22,9 +22,9 @@ public class RoomController {
         return roomService.getAllRoom();
     }
 
-    @GetMapping("/get-room/{roomNumber}")
-    public List<RoomEntity> getRoom(@PathVariable String roomNumber) {
-        return null;
+    @GetMapping("/get-room/{roomNumber}/{status}")
+    public List<RoomEntity> getRoom(@PathVariable String roomNumber, @PathVariable int status) {
+        return roomService.getRoom(status, roomNumber);
     }
 
 

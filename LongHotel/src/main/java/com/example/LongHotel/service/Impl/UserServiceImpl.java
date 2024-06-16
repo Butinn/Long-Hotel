@@ -57,11 +57,8 @@ public class UserServiceImpl implements UserService {
             if (userEntity.getFullname() != null) {
                 user.setFullname(userEntity.getFullname());
             }
-            if (userEntity.getDateOfBirth() != null) {
-                user.setDateOfBirth(userEntity.getDateOfBirth());
-            }
-            if (userEntity.getType() != null) {
-                user.setType(userEntity.getType());
+            if (userEntity.getUserType() != null) {
+                user.setUserType(userEntity.getUserType());
             }
             if (userEntity.getEmail() != null) {
                 user.setEmail(userEntity.getEmail());

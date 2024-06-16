@@ -7,6 +7,7 @@ import lombok.NoArgsConstructor;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.time.ZonedDateTime;
 
 @Entity
 @Table(name = "appointment")
@@ -24,7 +25,10 @@ public class Appointment {
     private Integer userId;
 
     @Column(name = "room_id")
-    private int roomId;
+    private Integer roomId;
+
+    @Column(name = "room_number")
+    private String roomNumber;
 
     @Column(name = "fullname")
     private String fullname;
@@ -36,13 +40,13 @@ public class Appointment {
     private String note;
 
     @Column(name = "checkin_time")
-    private LocalDate checkinTime;
+    private ZonedDateTime checkinTime = ZonedDateTime.now();
 
     @Column(name = "checkout_time")
-    private LocalDate checkoutTime;
+    private ZonedDateTime checkoutTime = ZonedDateTime.now();
 
     @Column(name = "created_at")
-    private LocalDateTime createdAt = LocalDateTime.now();
+    private ZonedDateTime createdAt = ZonedDateTime.now();
 
     @Column(name = "total_price")
     private double totalPrice;

@@ -26,15 +26,12 @@ public class UserEntity {
     @Column(name = "fullname")
     private String fullname;
 
-    @Column(name = "date_of_birth")
-    private String dateOfBirth;
-
     @Column(name = "email")
     private String email;
 
     @Column(name = "phone_number")
     private String phoneNumber;
 
-    @Column(name = "type")
-    private Integer type;
+    @Column(name = "type")// 0: user 1: admin
+    private Integer userType;
 }

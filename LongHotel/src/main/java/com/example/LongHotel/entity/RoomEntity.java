@@ -20,14 +20,20 @@ public class RoomEntity {
     private String roomNumber;
 
     @Column(name = "status") // 0: empty 1: reserve
-    private int status;
+    private Integer status;
 
-    @Column(name = "room_type")
-    private String roomType;
+    @Column(name = "room_type")//1: phòng đơn 2: phòng đôi
+    private Integer roomType;
 
     @Column(name = "price")
-    private double price;
+    private Double price;
 
     @Column(name = "note")
     private String note;
+
+    @Column(name = "feature")
+    private String feature;
+
+    @Column(name = "description")
+    private String description;
 }

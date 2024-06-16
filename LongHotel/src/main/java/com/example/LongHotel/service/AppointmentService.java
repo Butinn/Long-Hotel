@@ -13,5 +13,13 @@ public interface AppointmentService {
 
     void clearAppointment(Integer appointmentId);
 
-    void editAppointment(Appointment appointment);
+    void editAppointment(Integer appointment);
+
+    List<Appointment> getAppointmentByUserId(Integer userId);
+
+    Appointment getAppointmentByRoomNumber(String roomNumber);
+
+    List<Appointment> getAppointmentByUserIdAndStatus(Integer userId, Integer status);
+
+    Appointment getAppointmentByRoomIdAndStatus(Integer roomId, Integer status);
 }

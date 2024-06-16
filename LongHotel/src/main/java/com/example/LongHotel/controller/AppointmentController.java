@@ -9,7 +9,7 @@ import java.util.List;
 
 @CrossOrigin
 @RestController
-@RequestMapping("api/appointment")
+@RequestMapping("/api/appointment")
 public class AppointmentController {
 
     private final AppointmentService appointmentService;
@@ -24,10 +24,24 @@ public class AppointmentController {
     }
 
     @GetMapping("/get-appointment/{userId}")
-    public List<Appointment> getAppointment(@PathVariable String userId) {
-        return null;
+    public List<Appointment> getAppointment(@PathVariable Integer userId) {
+         return appointmentService.getAppointmentByUserId(userId);
     }
 
+    @GetMapping("/get-appointment-by-userid-and-status/{userId}/{status}")
+    public List<Appointment> getAppointmentByUseridAndStatus(@PathVariable Integer userId, @PathVariable Integer status) {
+        return appointmentService.getAppointmentByUserIdAndStatus(userId, status);
+    }
+
+    @GetMapping("/get-appointment-by-roomid-and-status/{roomId}/{status}")
+    public Appointment getAppointmentByRoomIdAndStatus(@PathVariable Integer roomId, @PathVariable Integer status) {
+        return appointmentService.getAppointmentByRoomIdAndStatus(roomId, status);
+    }
+
+    @GetMapping("/get-appointment-number/{roomNumber}")
+    public Appointment getAppointment(@PathVariable String roomNumber) {
+        return appointmentService.getAppointmentByRoomNumber(roomNumber);
+    }
 
     @PostMapping("/create-appointment")
     public Appointment insertAppointment(@RequestBody Appointment appointment) {
@@ -40,9 +54,8 @@ public class AppointmentController {
         appointmentService.clearAppointment(appointmentId);
     }
 
-    @PutMapping("/edit")
-    public void editAppointment(@RequestBody Appointment appointment) {
-        appointmentService.editAppointment(appointment);
+    @PutMapping("/edit/{appointmentId}")
+    public void editAppointment(@PathVariable Integer appointmentId) {
+        appointmentService.editAppointment(appointmentId);
     }
-
 }

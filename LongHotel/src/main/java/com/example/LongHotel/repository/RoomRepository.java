@@ -9,5 +9,6 @@ import java.util.List;
 @Repository
 public interface RoomRepository extends JpaRepository<RoomEntity, Integer> {
     List<RoomEntity> findByStatus(int status);
+    List<RoomEntity> findByStatusAndRoomNumber(int status, String roomNumber);
 
 }
